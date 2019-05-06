@@ -2,7 +2,7 @@ let hlstate=0
 
 nnoremap <silent> n   n:call BlinkNext(0.4)<cr>
 nnoremap <silent> N   N:call BlinkNext(0.4)<cr>
-nnoremap <Leader>/ :if (hlstate%2 != 0) \| set nohlsearch \| else \| set hlsearch \| endif \| let hlstate=hlstate+1<cr>
+nnoremap <Leader>/ :if (hlstate%2 != 0) \| set nohlsearch \| else \| set hlsearch \| endif \| let hlstate=hlstate+1 \| echo "highlighting toggled"<cr>
 cnoremap <silent> <expr> <enter> FirstBlink()
 
 function! BlinkNext (blinktime)
